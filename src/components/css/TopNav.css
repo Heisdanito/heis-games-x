@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap');
+
+/* ── Root ── */
+.tn-root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Search ── */
+.tn-search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 7px 14px;
+  transition: border-color 0.2s, background 0.2s;
+  width: 200px;
+}
+
+.tn-search-wrap--focused {
+  border-color: rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.08);
+}
+
+.tn-search-icon {
+  color: rgba(255,255,255,0.35);
+  flex-shrink: 0;
+}
+
+.tn-search-wrap--focused .tn-search-icon {
+  color: rgba(255,255,255,0.6);
+}
+
+.tn-search-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #d4d1cb;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  width: 100%;
+  caret-color: #e05c4a;
+}
+
+.tn-search-input::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+
+/* ── Right actions ── */
+.tn-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Icon buttons ── */
+.tn-action-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 9px;
+  color: rgba(255,255,255,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+
+.tn-action-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #e0ddd8;
+  transform: scale(1.06);
+}
+
+.tn-action-btn:active {
+  transform: scale(0.94);
+}
+
+/* ── Badge ── */
+.tn-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  background: #e05c4a;
+  border-radius: 50%;
+  border: 1.5px solid #0f1013;
+}
+
+/* ── Avatar ── */
+.tn-avatar-wrap {
+  position: relative;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.tn-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #c0392b 0%, #7b2d26 100%);
+  border: 1.5px solid rgba(224,92,74,0.5);
+  color: #fff;
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, transform 0.1s;
+}
+
+.tn-avatar-wrap:hover .tn-avatar {
+  border-color: rgba(224,92,74,0.9);
+  transform: scale(1.06);
+}
+
+.tn-avatar-dot {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 9px;
+  height: 9px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 2px solid #0f1013;
+}

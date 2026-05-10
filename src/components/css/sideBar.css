@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap');
+
+/* ── Sidebar shell ── */
+.gs-sidebar {
+  width: 30%;
+  min-height: 520px;
+  background: #0f1013;
+  border-right: 1px solid #1a1c22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 18px;
+  gap: 0;
+  position: relative;
+  font-family: 'Syne', sans-serif;
+}
+
+/* ── Logo ── */
+.gs-logo {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: #e0ddd8;
+  text-transform: uppercase;
+  writing-mode: horizontal-tb;
+  margin-bottom: 32px;
+  text-align: center;
+  user-select: none;
+}
+
+/* ── Nav list ── */
+.gs-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+}
+
+/* ── Nav item wrapper (for tooltip positioning) ── */
+.gs-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Nav button ── */
+.gs-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: transparent;
+  border: none;
+  color: #3e414c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.18s, color 0.18s, transform 0.12s;
+}
+
+.gs-nav-btn:hover {
+  background: #1c1e26;
+  color: #9a9da8;
+  transform: scale(1.08);
+}
+
+.gs-nav-btn:active {
+  transform: scale(0.94);
+}
+
+/* ── Active state ── */
+.gs-nav-btn--active {
+  background: #c0392b;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(192, 57, 43, 0.45), 0 0 6px rgba(192, 57, 43, 0.3);
+}
+
+.gs-nav-btn--active:hover {
+  background: #a93226;
+  color: #fff;
+}
+
+/* Active pip — left edge accent */
+.gs-active-pip {
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 18px;
+  background: #e05c4a;
+  border-radius: 0 2px 2px 0;
+  animation: pipIn 0.2s ease forwards;
+}
+
+@keyframes pipIn {
+  from { height: 0; opacity: 0; }
+  to   { height: 18px; opacity: 1; }
+}
+
+/* ── Tooltip ── */
+.gs-tooltip {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1c1e26;
+  border: 1px solid #2a2d36;
+  color: #c8c5be;
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 7px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+  animation: tipIn 0.15s ease forwards;
+}
+
+.gs-tooltip::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right-color: #2a2d36;
+}
+
+@keyframes tipIn {
+  from { opacity: 0; transform: translateY(-50%) translateX(-4px); }
+  to   { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+/* ── Bottom section ── */
+.gs-bottom {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #1a1c22;
+  width: 40px;
+}
+
+.gs-nav-btn--logout {
+  color: #3e414c;
+}
+
+.gs-nav-btn--logout:hover {
+  background: #1c1e26;
+  color: #e05c4a;
+}

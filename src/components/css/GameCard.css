@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Barlow:wght@400;500&display=swap');
+
+.gr-card {
+  font-family: 'Barlow', sans-serif;
+  background: #1a1a1e;
+  border: 1px solid #262644;
+  border-radius: 14px;
+  width: 50vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 200px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+.gr-accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #c0392b, transparent 70%);
+  z-index: 3;
+}
+
+/* ── Left content ── */
+
+.gr-left {
+  padding: 20px 18px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.gr-badge {
+  display: inline-block;
+  background: #c0392b;
+  color: #ffd5d0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.gr-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f0ede8;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin: 0 0 6px;
+}
+
+.gr-price {
+  font-size: 17px;
+  font-weight: 500;
+  color: #e05c4a;
+  margin: 0 0 18px;
+}
+
+/* ── Action buttons ── */
+
+.gr-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.gr-btn-buy {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.gr-btn-buy:hover {
+  background: #a93226;
+  transform: scale(1.03);
+}
+
+.gr-btn-buy:active {
+  transform: scale(0.97);
+}
+
+.gr-btn-cart {
+  background: transparent;
+  color: #b0adb8;
+  border: 1px solid #3e3e4a;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, transform 0.1s;
+}
+
+.gr-btn-cart:hover {
+  border-color: #6e6e82;
+  color: #e0dde8;
+  transform: scale(1.03);
+}
+
+.gr-btn-cart:active {
+  transform: scale(0.97);
+}
+
+/* ── Character image ── */
+
+
+
+.gr-img-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #1a1a1e 0%, transparent 40%);
+  z-index: 1;
+}
+
+.gr-img {
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: saturate(0.85) contrast(1.1);
+}
